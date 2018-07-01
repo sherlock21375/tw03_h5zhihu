@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>王俊动画h5测试展示</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div id="loading">
+		<div id="loading_gif"></div>
+		<div id="enter" onclick="play();"></div>
+		<div id="repeat_" style="display: none;"></div>
+	</div>
+	<div>
+		<video id="videoid" x5-video-player-type="h5" x-webkit-airplay="true" airplay="allow" playsinline="" webkit-playsinline="" src="index.mp4" style="width: 100%; height: 100%; object-fit: cover; display: none;"></video>
+	</div>
+	
+<script type="text/javascript">
+var videoid = document.getElementById("videoid");
+function play() {
+	document.getElementById("loading").style.display='none';
+	videoid.style.display='';
+    videoid.play();
+}
+videoid.addEventListener("ended",function(){
+         alert("视频播放完成，可设置下一步动作");
+    })
+</script>
+</html>
+<body>
